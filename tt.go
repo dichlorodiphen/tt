@@ -51,10 +51,7 @@ func submitTask(task string) {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		fmt.Printf("Erroring loading .env file: %v\n", err)
-	}
+	godotenv.Load()
 
 	if len(os.Args) < 2 {
 		fmt.Println("Usage: tt <task title>")
